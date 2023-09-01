@@ -1,0 +1,19 @@
+Database Normalizer 
+
+Change the database connection string in appSettings
+Run the migrations and database will be created
+
+Option 1-
+
+Csv file for Database form is added in the project download it and then upload and data will be added in the table
+Can convert csv to excel and json and go on it will add it accordingly
+This option will only add 1 table at a time
+
+upload the files for initial data seeding through sample csv file provided
+
+option 2-
+
+Sql servers are supported  in db connection option, mongodb and nosql is not supported for now
+
+When provided with Connection string for database it will extract data from all the tables related to the common db i.e. AppDbContext defined in the app
+and upload the data in respective table

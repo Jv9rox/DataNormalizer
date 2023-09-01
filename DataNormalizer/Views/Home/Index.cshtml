@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Insert DB link</h1>
+    @using (Html.BeginForm("Submit", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            <label>Add the connection String for Sql server and see the magic in database Ex- "Server=MSI\\SQLEXPRESS;database=DataNormalizer;Trusted_Connection=True;TrustServerCertificate=True;"</label>
+            <input type="text" name="ConnectionString" />
+            <input type="submit" value="Submit" />
+        </div>
+    }
+    <h2>File Upload</h2>
+
+    @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label>Add any file, hit upload button and see the magic in database(Supported file types- csv, json, excel, yaml, parquet, avro)</label>
+        <label>Presently mapping to DatabaseForm table is supported </label>
+        <input type="file" name="file" />
+        <input type="submit" value="Upload" />
+    }
+</div>
